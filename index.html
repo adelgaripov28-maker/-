@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FES X AMIRKA</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>FES X AMIRKA</h1>
+            <p>Добро пожаловать! Участвуйте в розыгрышах, получайте звёзды и выигрывайте призы!</p>
+        </div>
+        
+        <div class="tabs">
+            <div class="tab active" data-tab="giveaways">🎁 Раздачи</div>
+            <div class="tab" data-tab="stars">⭐ Звёзды</div>
+            <div class="tab" data-tab="support">❤️ Поддержать</div>
+            <div class="tab" data-tab="profile">👤 Профиль</div>
+        </div>
+        
+        <div class="tab-content active" id="giveaways">
+            <h2>Активные розыгрыши</h2>
+            <div id="giveaways-list"></div>
+        </div>
+        
+        <div class="tab-content" id="stars">
+            <h2>Покупка звёзд</h2>
+            <div class="stars-packs">
+                <div class="star-pack">
+                    <h3>100 звёзд</h3>
+                    <p class="price">99 ₽</p>
+                    <button class="buy-btn" data-amount="100">Купить</button>
+                </div>
+                <div class="star-pack">
+                    <h3>500 звёзд</h3>
+                    <p class="price">449 ₽</p>
+                    <button class="buy-btn" data-amount="500">Купить</button>
+                </div>
+                <div class="star-pack">
+                    <h3>1000 звёзд</h3>
+                    <p class="price">799 ₽</p>
+                    <button class="buy-btn" data-amount="1000">Купить</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-content" id="support">
+            <h2>Поддержать проект</h2>
+            <div class="support-card">
+                <p>Спасибо что хотите поддержать наш проект. Если вы отправите нам от 15 звезд мы будем очень благодарны!</p>
+                <div class="support-options">
+                    <button class="support-btn" data-amount="15">Send 15 stars</button>
+                    <button class="support-btn" data-amount="50">Send 50 stars</button>
+                    <button class="support-btn" data-amount="100">Send 100 stars</button>
+                </div>
+                <p id="support-message"></p>
+            </div>
+        </div>
+        
+        <div class="tab-content" id="profile">
+            <h2>Ваш профиль</h2>
+            <div class="profile-info">
+                <p>ID: <span id="profile-id"></span></p>
+                <p>Имя: <span id="profile-name"></span></p>
+                <p>Юзернейм: <span id="profile-username"></span></p>
+                <p>Участий: <span id="profile-participations">0</span></p>
+                <p>Побед: <span id="profile-wins">0</span></p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>FES X AMIRKA © 2025. Beta. Права защищены «FesakTeam»</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
