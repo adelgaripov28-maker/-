@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    padding: 30px 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    min-width: 120px;
+    margin: 2px;
+}
+
+.tab.active {
+    background: rgba(255, 126, 95, 0.2);
+    color: #ff7e5f;
+}
+
+.tab-content {
+    display: none;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.giveaway {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.giveaway-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.giveaway-header h3 {
+    color: #ff7e5f;
+}
+
+.end-date {
+    color: #a0a0c0;
+    font-size: 0.9rem;
+}
+
+.giveaway-details {
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+    color: #a0a0c0;
+}
+
+.username-input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.participate-btn, .support-btn, .buy-btn {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    transition: all 0.3s ease;
+    margin: 5px 0;
+}
+
+.participate-btn:hover, .support-btn:hover, .buy-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(255, 126, 95, 0.4);
+}
+
+.participate-btn:disabled {
+    background: #555;
+    cursor: not-allowed;
+}
+
+.status-message {
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.success {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4CAF50;
+}
+
+.error {
+    background: rgba(244, 67, 54, 0.2);
+    color: #f44336;
+}
+
+.stars-packs {
+    display: grid;
+    gap: 15px;
+}
+
+.star-pack {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.star-pack h3 {
+    color: #ff7e5f;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #feb47b;
+}
+
+.support-card {
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.support-options {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.support-btn {
+    width: auto;
+    min-width: 120px;
+}
+
+.profile-info {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-info p {
+    margin: 10px 0;
+    padding: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-section h2 {
+    color: #ff7e5f;
+    margin-bottom: 20px;
+}
+
+.admin-section input, .admin-section textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    margin: 8px 0;
+    font-size: 1rem;
+}
+
+.admin-section button {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.admin-section button:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(106, 17, 203, 0.4);
+}
+
+.block-user-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.block-user-form input {
+    flex: 1;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.stats p {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #a0a0c0;
+    font-size: 0.9rem;
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 600px) {
+    .tabs {
+        flex-direction: column;
+    }
+    
+    .tab {
+        margin: 2px 0;
+    }
+    
+    .support-options {
+        flex-direction: column;
+    }
+    
+    .block-user-form {
+        flex-direction: column;
+    }
+}
