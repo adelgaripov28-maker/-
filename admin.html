@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ панель - FES X AMIRKA</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Админ панель</h1>
+            <p>FES X AMIRKA - Управление розыгрышами и пользователями</p>
+        </div>
+
+        <div class="admin-section">
+            <h2>Добавить розыгрыш</h2>
+            <form id="add-giveaway-form">
+                <input type="text" id="giveaway-title" placeholder="Название розыгрыша" required>
+                <textarea id="giveaway-description" placeholder="Описание" required></textarea>
+                <input type="text" id="giveaway-prize" placeholder="Приз" required>
+                <input type="datetime-local" id="giveaway-end-date" required>
+                <input type="number" id="giveaway-stars" placeholder="Звёзд для участия (0 если не нужно)" min="0">
+                <button type="submit">Создать розыгрыш</button>
+            </form>
+        </div>
+
+        <div class="admin-section">
+            <h2>Активные розыгрыши</h2>
+            <div id="active-giveaways-list"></div>
+        </div>
+
+        <div class="admin-section">
+            <h2>Управление пользователями</h2>
+            <div class="block-user-form">
+                <input type="text" id="block-user-id" placeholder="ID пользователя для блокировки">
+                <button id="block-user-btn">Заблокировать</button>
+            </div>
+            <div id="blocked-users-list"></div>
+        </div>
+
+        <div class="admin-section">
+            <h2>Статистика</h2>
+            <div class="stats">
+                <p>Всего розыгрышей: <span id="total-giveaways">0</span></p>
+                <p>Активных розыгрышей: <span id="active-giveaways-count">0</span></p>
+                <p>Заблокированных пользователей: <span id="blocked-users-count">0</span></p>
+                <p>Получено поддержки: <span id="total-support">0</span> звёзд</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>FES X AMIRKA Admin © 2025. Beta. Права защищены «FesakTeam»</p>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
